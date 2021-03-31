@@ -18,18 +18,18 @@ export default class AddComment extends React.Component {
   submitData = async (e) => {
     e.preventDefault()
     try {
-      let resp = await fetch(`https://striveschool-api.herokuapp.com/api/comments/${this.props.elemID}`, {
+      let resp = await fetch(`https://striveschool-api.herokuapp.com/api/comments/`, {
                 method: 'POST',
                 body: JSON.stringify(this.state),
                 headers: {
                     'Content-type': 'application/json',
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUxZjMxNTg5YzI2ZjAwMTU3ZjljMmMiLCJpYXQiOjE2MTU5ODMzODIsImV4cCI6MTYxNzE5Mjk4Mn0.imIEHolN9xmsiBnjzmaIW3trD3kNRO__6EX26FrJ6bU"
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDY0NzI2NTcwNDYyZTAwMTUyMTkwMjYiLCJpYXQiOjE2MTcxOTU2MjIsImV4cCI6MTYxODQwNTIyMn0.zrSxh3mTMKBTcL9qQhyb6rN7vlLdPf1sZ4S_4UHbr_0"
                 }
             })
       if (resp.ok) {
                 alert('your comment has been uploaded')
                 this.setState({
-          
+                        ...this.state,
                         comment: '',
                         rate: 1,
                     

@@ -27,7 +27,7 @@ export default class CommentArea extends React.Component {
         {
           headers: {
             Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUxZjMxNTg5YzI2ZjAwMTU3ZjljMmMiLCJpYXQiOjE2MTU5ODMzODIsImV4cCI6MTYxNzE5Mjk4Mn0.imIEHolN9xmsiBnjzmaIW3trD3kNRO__6EX26FrJ6bU",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDY0NzI2NTcwNDYyZTAwMTUyMTkwMjYiLCJpYXQiOjE2MTcxOTU2MjIsImV4cCI6MTYxODQwNTIyMn0.zrSxh3mTMKBTcL9qQhyb6rN7vlLdPf1sZ4S_4UHbr_0",
           },
         }
       );
@@ -40,6 +40,7 @@ export default class CommentArea extends React.Component {
         });
       } else {
         this.setState({
+          ...this.setState,
           isLoading: false,
           isError: true,
         });
@@ -47,6 +48,7 @@ export default class CommentArea extends React.Component {
     } catch (error) {
       console.log(error);
       this.setState({
+        ...this.setState,
         isLoading: false,
         isError: true,
       });
@@ -62,7 +64,7 @@ export default class CommentArea extends React.Component {
           method: "DELETE",
           headers: {
             Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUxZjMxNTg5YzI2ZjAwMTU3ZjljMmMiLCJpYXQiOjE2MTU5ODMzODIsImV4cCI6MTYxNzE5Mjk4Mn0.imIEHolN9xmsiBnjzmaIW3trD3kNRO__6EX26FrJ6bU",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDY0NzI2NTcwNDYyZTAwMTUyMTkwMjYiLCJpYXQiOjE2MTcxOTU2MjIsImV4cCI6MTYxODQwNTIyMn0.zrSxh3mTMKBTcL9qQhyb6rN7vlLdPf1sZ4S_4UHbr_0",
           },
         }
       );
