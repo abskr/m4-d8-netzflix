@@ -1,0 +1,90 @@
+body {
+  background: #000;
+}
+.navbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0.2em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.486);
+  border-radius: 8px;
+  width: 0.5em;
+}
+
+.backdrop-blur {
+  background-color: rgba(0, 0, 0, 0.686);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background 0.5s ease;
+}
+
+.navbar-brand img {
+  background: transparent;
+}
+
+header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.05)),
+    url('https://occ-0-2835-2774.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABZ69OBwRoR4HTLLWfIgOB_bg7N5kL3k7RdcVYDxAwLXm9s36AW9YMvtg3MfEAIivc1WnMlpBSHqwNV_hz7Pkl15djfUi.webp?r=e04');
+  width: 100%;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+#header-text {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+}
+
+#header-text button {
+  opacity: 0.8;
+}
+.play-button {
+  background-color: white !important;
+  width: 120px;
+  color: black !important;
+}
+
+#header-text button:hover {
+  opacity: 0.3;
+}
+
+div h5 {
+  color: white;
+  margin-left: 20px;
+}
+
+footer li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+footer li:hover {
+  color: darkgray;
+}
+
+.service-code {
+  font-size: 13px;
+  padding: 5px;
+  background: #000;
+  color: grey;
+  border: 1px solid grey;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+footer h6 {
+  font-size: 12px;
+  color: grey;
+  margin-left: 40px;
+  margin-top: 25px;
+}
+.row {
+  overflow-x: auto;
+}
