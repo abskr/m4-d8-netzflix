@@ -25,7 +25,9 @@ export default class App extends Component {
     }
   }
 
-  updateStateFromRegistration = (value) => this.setState({})
+  getName = (value) => this.setState({...this.state.userData, name : value })
+
+  updateStateFromChild = (value) => this.setState({...this.state.userData}, value)
 
 
   render() {
@@ -36,7 +38,7 @@ export default class App extends Component {
         <div className='App'>
           <Route path='/' exact component={Header} />
           <Route path='/home' exact component={Home} />
-          <Route path='/registration' exact render={(routeProps) => ( <Registration {...routeProps} updateStateFromRegistration={this.updateStateFromRegistration} selectedValue={this.state.userData}/> )}/>
+          <Route path='/registration' exact render={(routeProps) => ( <Registration {...routeProps} updateStateFromChild={this.updateStateFromChild} selectedValue={this.state.userData}/> )}/>
         </div>
         <Footer />
       </Router>
